@@ -9,7 +9,6 @@ import { ContactComponent } from "./contact/contact.component";
 
 const routes: Routes = [
   {
-    //wwww.bıdıbıd.com/
     path: "",
     component: MainLayoutComponent,
     children: [
@@ -18,23 +17,18 @@ const routes: Routes = [
         component: HomeComponent
       },
       {
-        //wwww.bıdıbıd.com/hakkimizda
         path: "hakkimda",
         component: AboutMeComponent
       },
       {
-        //wwww.bıdıbıd.com/iletisim
         path: "iletisim",
         component: ContactComponent
       }
     ]
   },
   {
-    //wwww.bıdıbıd.com/admin
     path: "admin",
     component: AdminLayoutComponent
-
-    //www.bididbid.com/admin/makale/ekle
   }
 ];
 
