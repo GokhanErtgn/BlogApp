@@ -10,9 +10,10 @@ import {ContactComponent} from './contact/contact.component';
 import {ComponentsModule} from '../components/components.module';
 import { MainLayoutComponent } from '../layout/main-layout/main-layout.component';
 import { MainNavComponent } from '../nav/main-nav/main-nav.component';
+import { ArticleComponent } from './article/article.component';
 
 @NgModule({
-  declarations: [MainLayoutComponent,MainNavComponent,HomeComponent,AboutMeComponent,ContactComponent],
+  declarations: [MainLayoutComponent,MainNavComponent,HomeComponent,AboutMeComponent,ContactComponent, ArticleComponent],
   imports: [
     CommonModule,BrowserModule,HttpClientModule,AppRoutingModule,ComponentsModule
   ]

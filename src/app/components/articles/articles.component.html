@@ -1,29 +1,31 @@
-<main class="page">
+<div **ngIf="articleService.loading">
+  <main **ngFor="let item of createRange()"  class="page mb-2">
 
-  <!-- Title -->
-  <h1 class="page-title">Content Loading Placeholder</h1>
+    <!-- Title -->
+    <h1 class="page-title">Content Loading Placeholder</h1>
 
-  <!-- Content -->
-  <div class="page-content">
+    <!-- Content -->
+    <div class="page-content">
 
-      <!-- Placeholder Content -->
-      <div class="placeholder-content">
-          <div class="placeholder-content_item"></div>
-          <div class="placeholder-content_item"></div>
-          <div class="placeholder-content_item"></div>
-          <div class="placeholder-content_item"></div>
-          <div class="placeholder-content_item"></div>
-          <div class="placeholder-content_item"></div>
-          <div class="placeholder-content_item"></div>
-          <div class="placeholder-content_item"></div>
-          <div class="placeholder-content_item"></div>
-          <div class="placeholder-content_item"></div>
-          <div class="placeholder-content_item"></div>
-      </div>
+        <!-- Placeholder Content -->
+        <div class="placeholder-content">
+            <div class="placeholder-content_item"></div>
+            <div class="placeholder-content_item"></div>
+            <div class="placeholder-content_item"></div>
+            <div class="placeholder-content_item"></div>
+            <div class="placeholder-content_item"></div>
+            <div class="placeholder-content_item"></div>
+            <div class="placeholder-content_item"></div>
+            <div class="placeholder-content_item"></div>
+            <div class="placeholder-content_item"></div>
+            <div class="placeholder-content_item"></div>
+            <div class="placeholder-content_item"></div>
+        </div>
 
-  </div>
+    </div>
 
-</main>
+  </main>
+</div>
 
 
 
@@ -39,7 +41,7 @@
 </div>
 
 <ng-template #emptyTemplate>
-  <div class="alert lart-danger" role="alert">
+  <div *ngIf="!articleService.loading"  class="alert lart-danger" role="alert">
     Makale bulunamadı
   </div>
 </ng-template>
@@ -85,5 +87,5 @@
   </div>
 </ng-template>
 
-<pagination-controls responsive="true" (pageChange)="pageChanged($event)" previousLable="geri" nextLabel="ileri">
+<pagination-controls **ngIf="totalCount>pageSize" responsive="true" (pageChange)="pageChanged($event)" previousLable="geri" nextLabel="ileri">
 </pagination-controls>
