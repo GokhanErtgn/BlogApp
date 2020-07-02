@@ -7,6 +7,7 @@ import { HomeComponent } from "./pages/home/home.component";
 import { AboutMeComponent } from "./pages/about-me/about-me.component";
 import { ContactComponent } from "./pages/contact/contact.component";
 import { ArticleComponent } from './pages/article/article.component';
+import { CategoryArticlesComponent } from './pages/category-articles/category-articles.component';
 
 const routes: Routes = [
   {
@@ -22,8 +23,16 @@ const routes: Routes = [
         component:HomeComponent
       },
       {
-        path:"makale/:id",
+        path:"makale/:title/:id",
         component:ArticleComponent
+      },
+      {
+        path:"kategori/:name/:id",
+        component:CategoryArticlesComponent
+      },
+      {
+        path:"kategori/:name/:id/sayfa/:page",
+        component:CategoryArticlesComponent
       },
       {
         path: "hakkimda",
