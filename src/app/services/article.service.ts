@@ -11,6 +11,16 @@ export class ArticleService {
   public loading: boolean = true;
   private apiUrl: string = "https://localhost:44356/api/articles";
 
+  getSearchArticles(searchText:string,page:number,pageSize:number){
+    let api='${this.apiUrl}/SearchArticles/${searchText}/${page}/${pageSize}';
+
+    return this.httpClient.get<ArticlePg>(api).pipe(
+      tap(x=>{
+        this.loading=false;
+      })
+    )
+  }
+
   getArticles(page: number, pageSize: number) {
     let api = `${this.apiUrl}/${page}/${pageSize}`;
 

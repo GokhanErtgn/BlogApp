@@ -8,6 +8,7 @@ import { AboutMeComponent } from "./pages/about-me/about-me.component";
 import { ContactComponent } from "./pages/contact/contact.component";
 import { ArticleComponent } from './pages/article/article.component';
 import { CategoryArticlesComponent } from './pages/category-articles/category-articles.component';
+import { SearchComponent } from './pages/search/search.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,10 @@ const routes: Routes = [
       {
         path:"kategori/:name/:id/sayfa/:page",
         component:CategoryArticlesComponent
+      },
+      {
+        path:"arama/sayfa/:page",
+        component:SearchComponent
       },
       {
         path: "hakkimda",

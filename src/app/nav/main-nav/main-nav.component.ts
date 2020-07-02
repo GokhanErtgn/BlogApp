@@ -28,5 +28,13 @@ export class MainNavComponent implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
+
+  search(searchText) {
+    if(searchText=="" || searchText==null || searchText==undefined){
+      return false;
+    }
+    this.router.navigateByUrl('/arama/sayfa/1?s=${searchText}')
+  }
+
 }
