@@ -21,32 +21,32 @@ const routes: Routes = [
         component: HomeComponent
       },
       {
-        path:"sayfa/:page",
-        component:HomeComponent
+        path: "sayfa/:page",
+        component: HomeComponent
       },
       {
-        path:"makale/:title/:id",
-        component:ArticleComponent
+        path: "makale/:title/:id",
+        component: ArticleComponent
       },
       {
-        path:"kategori/:name/:id",
-        component:CategoryArticlesComponent
+        path: "kategori/:name/:id",
+        component: CategoryArticlesComponent
       },
       {
-        path:"kategori/:name/:id/sayfa/:page",
-        component:CategoryArticlesComponent
+        path: "kategori/:name/:id/sayfa/:page",
+        component: CategoryArticlesComponent
       },
       {
-        path:"arama/sayfa/:page",
-        component:SearchComponent
+        path: "arama/sayfa/:page",
+        component: SearchComponent
       },
       {
-        path:"arsiv/:year/:month",
-        component:ArchiveComponent
+        path: "arsiv/:year/:month",
+        component: ArchiveComponent
       },
       {
-        path:"arsiv/:year/:month/sayfa/:page",
-        component:ArchiveComponent
+        path: "arsiv/:year/:month/sayfa/:page",
+        component: ArchiveComponent
       },
       {
         path: "hakkimda",
@@ -68,4 +68,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

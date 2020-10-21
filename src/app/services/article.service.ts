@@ -69,4 +69,10 @@ export class ArticleService {
     );
   }
 
+  articlViewCountUp(id:number)
+  {
+    let api='${this.apiUrl}/ArticleViewCountUp/${id}';
+    return this.httpClient.get(api);
+  }
+
 }

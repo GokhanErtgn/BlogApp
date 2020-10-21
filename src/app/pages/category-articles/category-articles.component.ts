@@ -35,7 +35,7 @@ export class CategoryArticlesComponent implements OnInit {
           this.page=Number(params.get("page"));
         }
 
-        this.ajax=this.articleService.getArticlesWithCateegory(this.categoryId,this.page,this.pageSize).subscribe(data=>{
+        this.ajax=this.articleService.getArticlesWithCategory(this.categoryId,this.page,this.pageSize).subscribe(data=>{
           this.articles=data.articles;
           this.totalCpount=data.totalCount;
         })
